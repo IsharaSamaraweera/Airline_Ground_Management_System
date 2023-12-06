@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="app.component.scss">
+</head>
+<body>
+    <div class="container">
+    <p>Welcome to the Airline Ground Management System</p>
+    <a routerLink="/login">
+    <button type="button" value="login" id="submit" (click)="goToLogin()">Login</button>
+    <button type="button" value="Signin" id="submit" (click)="goToLogin()">Signin</button>
+    </a>
+    </div>
+</body>
+</html>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <link rel="stylesheet" type="text/css" href="user-list.component.scss">
+</head>
+<body>
+    <div class="user-list-container">
+        <h2>User List</h2>
+      
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>
+                <button (click)="editUser(user.id)" class="action-button edit-button">
+                  Edit
+                </button>
+                <button (click)="deleteUser(user.id)" class="action-button delete-button">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
+</html>
